@@ -1,10 +1,5 @@
 var express = require('express');
 
-var app = express();
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
-var bodyParser = require('body-parser');
-
-
 var mysql = require('mysql');
 var pool = mysql.createPool({
   connectionLimit : 10,
@@ -15,6 +10,12 @@ var pool = mysql.createPool({
 });
 
 //module.exports.pool = pool;
+
+
+var app = express();
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var bodyParser = require('body-parser');
+
 
 
 app.use(express.static(__dirname + '/'));
