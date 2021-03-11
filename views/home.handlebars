@@ -1,0 +1,15 @@
+<h1>{{results}}</h1>
+<form class="form-signup">
+	<h3>Please enter your E-Mail and subscribe to recieve updates on products coming to you soon in your future or even past!</h3>
+	<input type="email" id="tosend" placeholder="Electronic Mail Address">
+	<button type="submit" id="submit" class="button">Signup</button>
+	<label id="response"></label>
+</form>
+
+<table>
+	{{#each bodyTable}}
+		<tr>
+			<th>{{this.name}}</th><td>{{this.value}}</td>
+		</tr>
+	{{/each}}
+</table>
